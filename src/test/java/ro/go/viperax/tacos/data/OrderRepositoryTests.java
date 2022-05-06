@@ -2,7 +2,7 @@ package ro.go.viperax.tacos.data;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import ro.go.viperax.tacos.Ingredient;
 import ro.go.viperax.tacos.Ingredient.Type;
 import ro.go.viperax.tacos.Taco;
@@ -12,7 +12,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@DataJdbcTest
+@DataJpaTest
 public class OrderRepositoryTests {
 
   @Autowired

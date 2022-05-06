@@ -16,13 +16,13 @@ import javax.validation.Valid;
 @RequestMapping("/orders")
 @SessionAttributes("tacoOrder")
 public class OrderController {
-  
+
   private OrderRepository orderRepo;
 
   public OrderController(OrderRepository orderRepo) {
     this.orderRepo = orderRepo;
   }
-  
+
   @GetMapping("/current")
   public String orderForm() {
     return "orderForm";
@@ -33,10 +33,10 @@ public class OrderController {
     if (errors.hasErrors()) {
       return "orderForm";
     }
-    
+
     orderRepo.save(order);
     sessionStatus.setComplete();
-    
+
     return "redirect:/";
   }
 

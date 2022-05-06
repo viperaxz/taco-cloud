@@ -5,5 +5,5 @@ import ro.go.viperax.tacos.Ingredient;
 
 public interface IngredientRepository 
          extends CrudRepository<Ingredient, String> {
-
+  
 }
